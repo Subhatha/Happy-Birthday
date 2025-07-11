@@ -12,7 +12,7 @@ let allExploded = false;
 let audioUnlocked = false;
 
 // Load firework sound
-const fireworkSound = new Audio('firework.wav');
+const fireworkSound = new Audio('/firework.wav');
 fireworkSound.volume = 0.3;
 
 // Unlock audio on first user interaction
