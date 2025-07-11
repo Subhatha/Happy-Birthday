@@ -1,0 +1,61 @@
+/* Make sure canvas fills the screen */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  position: relative;
+}
+
+#canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#letter-container {
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+}
+
+.letter {
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+}
+
+.balloon {
+  width: 20px;
+  height: 28px;
+  background: radial-gradient(circle at center, #ff0000 60%, #aa0000 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: balloon-flicker 1.5s infinite alternate;
+}
+
+@keyframes balloon-flicker {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-3px); }
+}
+
+
+@keyframes balloon-wobble {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+}
