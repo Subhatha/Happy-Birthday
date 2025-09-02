@@ -11,7 +11,7 @@ let currentLetterIndex = 0;
 let allExploded = false;
 let audioUnlocked = false;
 
-// Load firework sound
+// firework sound
 const fireworkSound = new Audio('/firework.wav');
 fireworkSound.volume = 0.3;
 
